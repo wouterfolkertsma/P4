@@ -27,7 +27,7 @@ class ArtikelTest {
     @Test
     void getNaam() {
         Artikel artikel = new Artikel();
-        assertEquals(artikel.getNaam(), null);
+        assertNull(artikel.getNaam());
 
         Artikel artikel1 = new Artikel("Foo", 5.0);
         assertEquals(artikel1.getNaam(), "Foo");
