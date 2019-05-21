@@ -1,9 +1,5 @@
 package com.hanze.kantine;
 
-/**
- * Author Wouter Folkertsma
- * Datum 15-05-2019
- */
 public class Artikel {
 
     private double prijs;

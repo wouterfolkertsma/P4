@@ -3,10 +3,6 @@ package com.hanze.kantine;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-/**
- * Author Wouter Folkertsma
- * Datum 15-05-2019
- */
 public class Datum {
 
 	private int dag;
@@ -46,6 +42,7 @@ public class Datum {
 		if (jaar < 1900 || jaar > 2100) {
 			return false;
 		}
+
 		SimpleDateFormat dt = new SimpleDateFormat("dd-MM-yyyy");
 
 		try {
@@ -67,5 +64,17 @@ public class Datum {
 			return "Onbekend";
 		}
 		return this.dag + "-" + this.maand + "-" + this.jaar;
+	}
+
+	public int getDag() {
+		return dag;
+	}
+
+	public int getMaand() {
+		return maand;
+	}
+
+	public int getJaar() {
+		return jaar;
 	}
 }

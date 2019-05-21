@@ -10,7 +10,7 @@ public class Kassa {
      * Constructor
      */
     public Kassa(KassaRij kassarij) {
-        this.kassaRij = new KassaRij();
+        this.kassaRij = kassarij;
         this.kasInhoud = 0;
         this.aantalArtikelen = 0;
     }
