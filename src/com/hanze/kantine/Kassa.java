@@ -1,5 +1,8 @@
 package com.hanze.kantine;
 
+import java.util.Iterator;
+import java.util.Stack;
+
 public class Kassa {
 
     private KassaRij kassaRij;
@@ -24,8 +27,16 @@ public class Kassa {
      * @param klant die moet afrekenen
      */
     public void rekenAf(Dienblad klant) {
-        this.kasInhoud += klant.getTotaalPrijs();
-        this.aantalArtikelen += klant.getArtikelen().size();
+//        this.kasInhoud += klant.getTotaalPrijs();
+//        this.aantalArtikelen += klant.getArtikelen().size();
+
+        Stack<Artikel> artikels = klant.getArtikelen();
+        this.aantalArtikelen += artikels.size();
+
+        Iterator<Artikel> artikelIterator = klant.getArtikelen().iterator();
+        while (artikelIterator.hasNext()) {
+            this.kasInhoud += artikelIterator.next().getPrijs();
+        }
     }
 
     /**

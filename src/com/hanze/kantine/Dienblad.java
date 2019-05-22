@@ -6,18 +6,18 @@ import java.util.Stack;
 
 public class Dienblad {
 
-    private ArrayList<Artikel> artikelen;
+    private Stack<Artikel> artikelen;
     private Persoon klant;
     /**
      * Constructor
      */
     public Dienblad() {
-        this.artikelen = new ArrayList<>();
+        this.artikelen = new Stack<>();
     }
 
     public Dienblad(Persoon klant) {
         this.klant = klant;
-        this.artikelen = new ArrayList<>();
+        this.artikelen = new Stack<>();
     }
 
     /**
@@ -29,36 +29,11 @@ public class Dienblad {
         this.artikelen.add(artikel);
     }
 
-    /**
-     * Methode om aantal artikelen op dienblad te tellen
-     *
-     * @return Het aantal artikelen
-     */
-    public int getAantalArtikelen() {
-        return this.artikelen.size();
-    }
-
-    /**
-     * Methode om de totaalprijs van de artikelen
-     * op dienblad uit te rekenen
-     *
-     * @return De totaalprijs
-     */
-    public double getTotaalPrijs() {
-        double totaalPrijs = 0;
-
-        for (Artikel artikel : this.artikelen) {
-            totaalPrijs += artikel.getPrijs();
-        }
-
-        return totaalPrijs;
-    }
-
-    public ArrayList<Artikel> getArtikelen() {
+    public Stack<Artikel> getArtikelen() {
         return artikelen;
     }
 
-    public void setArtikelen(ArrayList<Artikel> artikelen) {
+    public void setArtikelen(Stack<Artikel> artikelen) {
         this.artikelen = artikelen;
     }
 

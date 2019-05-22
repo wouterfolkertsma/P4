@@ -2,7 +2,7 @@ package com.hanze.kantine;
 
 public class KantineSimulatie {
 
-    private Kantine kantine;
+    private static Kantine kantine;
 
     public static final int DAGEN = 7;
 
@@ -19,25 +19,22 @@ public class KantineSimulatie {
      *
      * @param dagen
      */
-    public static void simuleer(int dagen) {
+    public void simuleer(int dagen) {
+        for(int dag = 0;  dag < dagen; dag++) {
+            int aantalPersonen = 10 + dag;
 
-        // herhaal voor elke dag
-//        for(int i = 0; ...) {
+            for(int i = 0; i != aantalPersonen; i++) {
+                kantine.loopPakSluitAan();
+            }
 
-            // per dag nu even vast 10 + i personen naar binnen
-            // laten gaan, wordt volgende week veranderd...
+            kantine.verwerkRijVoorKassa();
 
-            // for lus voor personen
-//            for(int j = 0; j < 10 + i; j++){
-                // kantine.(...);
-//            }
+            System.out.printf("--------------- Dag: %d ---------------\n", dag);
+            System.out.printf("Aantal artikelen verkocht deze dag: %d\n", kantine.getKassa().getAantalArtikelen());
+            System.out.printf("Totale omzet deze dag: \u20ac%.2f\n", kantine.getKassa().hoeveelheidGeldInKassa());
 
-            // verwerk rij voor de kassa
-
-            // toon dagtotalen (artikelen en geld in kassa)
-
-            // reset de kassa voor de volgende dag
-//        }
+            kantine.resetKassa();
+        }
     }
 
     /**
@@ -52,6 +49,6 @@ public class KantineSimulatie {
             dagen = Integer.parseInt(args[0]);
         }
 
-        simuleer(dagen);
+        new KantineSimulatie().simuleer(dagen);
     }
 }

@@ -20,41 +20,38 @@ public class Kantine {
      * Persoon zich aan bij de rij voor de kassa.
      */
     public void loopPakSluitAan() {
-        // method body omitted
+        Persoon persoon = new Persoon("0000", "Jan", "van der Balk", new Datum(1, 1, 2000), 'm');
+        Dienblad dienblad = new Dienblad(persoon);
+
+        Artikel broodjeFrikandel = new Artikel("Broodje Frikandel", 1.8);
+        Artikel broodjeGezond = new Artikel("Broodje Gezond", 2.5);
+
+        dienblad.voegToe(broodjeFrikandel);
+        dienblad.voegToe(broodjeGezond);
+
+        kassarij.sluitAchteraan(dienblad);
     }
 
     /**
      * Deze methode handelt de rij voor de kassa af.
      */
     public void verwerkRijVoorKassa() {
-//        while() {
-//             omitted
-//        }
+        while(kassarij.erIsEenRij()) {
+             Dienblad dienblad = kassarij.eerstePersoonInRij();
+             kassa.rekenAf(dienblad);
+        }
     }
 
-    /**
-     * Deze methode telt het geld uit de kassa
-     *
-     * @return hoeveelheid geld in kassa
-     */
-    public double hoeveelheidGeldInKassa() {
-       return 0;
-    }
-
-    /**
-     * Deze methode geeft het aantal gepasseerde artikelen.
-     *
-     * @return het aantal gepasseerde artikelen
-     */
-    public int aantalArtikelen() {
-        return 0;
-    }
 
     /**
      * Deze methode reset de bijgehouden telling van
      * het aantal artikelen en "leegt" de inhoud van de kassa.
      */
     public void resetKassa() {
-        // method body omitted
+        kassa.resetKassa();
+    }
+
+    public Kassa getKassa() {
+        return kassa;
     }
 }
