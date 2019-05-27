@@ -48,6 +48,7 @@ public class Kassa {
     public int getAantalArtikelen() {
         return aantalArtikelen;
     }
+
     /**
      * Geeft het totaalbedrag van alle artikelen die de kass
      * zijn gepasseerd, vanaf het moment dat de methode

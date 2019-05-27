@@ -48,7 +48,7 @@ public class KantineAanbod {
      * naam van het artikel. Retourneert null als artikel niet bestaat.
      */
     private ArrayList<Artikel> getArrayList(String productnaam) {
-         return aanbod.get(productnaam); 
+         return aanbod.get(productnaam);
     }
 
     /**
@@ -67,7 +67,7 @@ public class KantineAanbod {
         {
             Artikel a=stapel.get(0);
             stapel.remove(0);
-            if(stapel.size()<=10)vulVoorraadAan(a.getNaam());
+            if( stapel.size() <=10) vulVoorraadAan(a.getNaam() );
             return a;
         }
     }
