@@ -31,15 +31,18 @@ public class KantineAanbod {
         }
     }
 
-    private void vulVoorraadAan(String productnaam){
+    private void vulVoorraadAan(String productnaam) {
     	ArrayList<Artikel> huidigeVoorraad = aanbod.get(productnaam);
-    	int startHoeveelheid = startVoorraad.get(productnaam);
-    	int huidigeHoeveelheid = huidigeVoorraad.size();
-    	double prijs = prijzen.get(productnaam);
-        for(int j=huidigeHoeveelheid;j<startHoeveelheid;j++) 
+
+        int startHoeveelheid = startVoorraad.get(productnaam);
+        int huidigeHoeveelheid = huidigeVoorraad.size();
+        double prijs = prijzen.get(productnaam);
+
+        for (int j = huidigeHoeveelheid; j < startHoeveelheid; j++)
         {
         	huidigeVoorraad.add(new Artikel(productnaam, prijs));
         }
+
         aanbod.put(productnaam, huidigeVoorraad);
     }
     
@@ -56,18 +59,19 @@ public class KantineAanbod {
      * Retourneert null als de stapel leeg is.
      */
     private Artikel getArtikel(ArrayList<Artikel> stapel) {
-        if (stapel==null) { 
+        if (stapel == null) {
             return null;
         }
-        if (stapel.size()==0)
-        {
+        if (stapel.size() == 0) {
            return null;
-        }
-        else 
-        {
-            Artikel a=stapel.get(0);
+        } else {
+            Artikel a = stapel.get(0);
             stapel.remove(0);
-            if( stapel.size() <=10) vulVoorraadAan(a.getNaam() );
+
+            if (stapel.size() <= KantineSimulatie.MIN_ARTIKELEN_PER_SOORT) {
+                vulVoorraadAan(a.getNaam());
+            }
+
             return a;
         }
     }
@@ -75,7 +79,7 @@ public class KantineAanbod {
     /**
      * Publieke methode om een artikel via naam van de stapel te pakken.
      * Retouneert null als artikel niet bestaat of niet op voorraad is.
-     * @param naam (van artikel)
+     * @param productnaam (van artikel)
      * @return artikel (of null)
      */
     public Artikel getArtikel(String productnaam) {

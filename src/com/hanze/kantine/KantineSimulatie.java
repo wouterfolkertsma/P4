@@ -28,8 +28,8 @@ public class KantineSimulatie {
             1.65, 1.65};
 
     // minimum en maximum aantal artikelen per soort
-    private static final int MIN_ARTIKELEN_PER_SOORT = 10000;
-    private static final int MAX_ARTIKELEN_PER_SOORT = 20000;
+    public static final int MIN_ARTIKELEN_PER_SOORT = 10;
+    public static final int MAX_ARTIKELEN_PER_SOORT = 20;
 
     // minimum en maximum aantal personen per dag
     private static final int MIN_PERSONEN_PER_DAG = 50;
@@ -118,6 +118,10 @@ public class KantineSimulatie {
      * 106
      */
     public void simuleer(int dagen) {
+
+        ArrayList<Double> dagOmzetten = new ArrayList<>();
+        ArrayList<Integer> dagArtikelen = new ArrayList<>();
+
         // for lus voor dagen
         for (int i = 0; i < dagen; i++) {
 
@@ -153,8 +157,14 @@ public class KantineSimulatie {
             System.out.printf("Aantal artikelen verkocht deze dag: %d\n", kantine.getKassa().getAantalArtikelen());
             System.out.printf("Totale omzet deze dag: \u20ac%.2f\n", kantine.getKassa().hoeveelheidGeldInKassa());
 
+            dagOmzetten.add(kantine.getKassa().hoeveelheidGeldInKassa());
+            dagArtikelen.add(kantine.getKassa().getAantalArtikelen());
+
             kantine.resetKassa();
         }
+
+        System.out.println(Administratie.berekenGemiddeldeOmzet(dagOmzetten));
+        System.out.println(Administratie.berekenGemiddeldAantal(dagArtikelen));
     }
 
     /**

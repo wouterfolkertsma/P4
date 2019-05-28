@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e97dc9ac-c3d3-47b0-92b3-aed125db5c14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hanze/kantine/Kantine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hanze/kantine/Kantine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KantineAanlevering/com/hanze/kantine/Kantine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KantineAanlevering/com/hanze/kantine/Kantine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KantineAanlevering/com/hanze/kantine/KantineAanbod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KantineAanlevering/com/hanze/kantine/KantineAanbod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KantineAanlevering/com/hanze/kantine/KantineSimulatie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KantineAanlevering/com/hanze/kantine/KantineSimulatie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KantineAanlevering/com/hanze/kantine/Kassa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KantineAanlevering/com/hanze/kantine/Kassa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hanze/kantine/Administratie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hanze/kantine/Administratie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hanze/kantine/KantineAanbod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hanze/kantine/KantineAanbod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hanze/kantine/KantineSimulatie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hanze/kantine/KantineSimulatie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hanze/kantine/Kassa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hanze/kantine/Kassa.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,62 +20,22 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-550827365">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="groovy" value="1" />
-          <entry key="java" value="33" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="33" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="3938" />
-          <entry key="txt" value="52" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="3938" />
-          <entry key="PLAIN_TEXT" value="52" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/KassaRij.java">
+        <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Dienblad.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="160">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/com/hanze/kantine/KassaTest.java">
+        <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/KantineSimulatie_2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+            <state relative-caret-position="375">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -80,44 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Kantine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-              <folding>
-                <marker date="1558978364191" expanded="true" signature="530:1015" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Datum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/com/hanze/kantine/DatumTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Dienblad.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="145">
+              <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -125,20 +52,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/KantineSimulatie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+            <state relative-caret-position="528">
+              <caret line="166" column="78" selection-start-line="166" selection-start-column="78" selection-end-line="166" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Kassa.java">
+        <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Administratie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="838">
-              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="139">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -146,20 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/KantineAanbod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="80" column="29" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Persoon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="956">
+              <caret line="81" column="39" lean-forward="true" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -177,6 +89,7 @@
     <findStrings>
       <find>Main</find>
       <find>public class</find>
+      <find>20000</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Wouter\Documents\School\KantineAanlevering</dir>
@@ -191,7 +104,6 @@
       <list>
         <option value="$PROJECT_DIR$/Artikel.java" />
         <option value="$PROJECT_DIR$/src/com/hanze/kantine/KantineSimulatie_1.java" />
-        <option value="$PROJECT_DIR$/src/com/hanze/kantine/Administratie.java" />
         <option value="$PROJECT_DIR$/src/com/hanze/kantine/Contant.java" />
         <option value="$PROJECT_DIR$/src/com/hanze/kantine/KantineSimulatie_2.java" />
         <option value="$PROJECT_DIR$/src/com/hanze/kantine/Pinpas.java" />
@@ -209,31 +121,24 @@
         <option value="$PROJECT_DIR$/src/com/hanze/kantine/Dienblad.java" />
         <option value="$PROJECT_DIR$/tests/com/hanze/kantine/DienbladTest.java" />
         <option value="$PROJECT_DIR$/src/com/hanze/kantine/Kassa.java" />
-        <option value="$PROJECT_DIR$/src/com/hanze/kantine/KantineAanbod.java" />
         <option value="$PROJECT_DIR$/src/com/hanze/kantine/Kantine.java" />
+        <option value="$PROJECT_DIR$/src/com/hanze/kantine/KantineAanbod.java" />
+        <option value="$PROJECT_DIR$/src/com/hanze/kantine/Administratie.java" />
         <option value="$PROJECT_DIR$/src/com/hanze/kantine/KantineSimulatie.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="270" />
-    <option name="y" value="25" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="3" />
+    <option name="y" value="50" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Course" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -272,6 +177,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,6 +273,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.hanze.kantine" />
       <option name="MAIN_CLASS_NAME" value="com.hanze.kantine.KassaRijTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -380,6 +288,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.hanze.kantine" />
       <option name="MAIN_CLASS_NAME" value="com.hanze.kantine.KassaTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -514,13 +423,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15062000" />
+    <option name="totallyTimeSpent" value="17189000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18710022" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18955651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -530,7 +439,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29291844" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29044586" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -540,7 +449,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32832617" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32738853" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -555,9 +464,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Artikel test" />
@@ -576,31 +482,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/hanze/kantine/PersoonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/com/hanze/kantine/KassaRijTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Administratie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Artikel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -632,35 +517,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/KantineSimulatie_2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/com/hanze/kantine/DienbladTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/KassaRij.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/hanze/kantine/KassaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Datum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        <state relative-caret-position="183">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -674,20 +535,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Dienblad.java">
+    <entry file="file://$PROJECT_DIR$/tests/com/hanze/kantine/KassaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="465">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/KassaRij.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Persoon.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Artikel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/hanze/kantine/PersoonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -696,35 +571,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Kassa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        <state relative-caret-position="449">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/KantineAanbod.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Persoon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="29" />
+        <state relative-caret-position="15">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Dienblad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/KantineSimulatie_2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Kantine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <marker date="1558978364191" expanded="true" signature="530:1015" ph="..." />
-          </folding>
+        <state relative-caret-position="145">
+          <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/KantineAanbod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="956">
+          <caret line="81" column="39" lean-forward="true" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/Administratie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hanze/kantine/KantineSimulatie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+        <state relative-caret-position="528">
+          <caret line="166" column="78" selection-start-line="166" selection-start-column="78" selection-end-line="166" selection-end-column="78" />
         </state>
       </provider>
     </entry>

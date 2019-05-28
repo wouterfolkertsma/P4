@@ -1,15 +1,23 @@
 package com.hanze.kantine;
 
+import java.util.ArrayList;
+
 public class Administratie {
 
     /**
      * Deze methode berekent van de int array aantal de gemiddelde waarde
      *
      * @param aantal
-     * @return het gemiddelde
+     * @return double
      */
-    public double berekenGemiddeldAantal(int[] aantal) {
-        return 0;
+    public static double berekenGemiddeldAantal(ArrayList<Integer> aantal) {
+        double total = 0;
+
+        for (int getal : aantal) {
+            total += getal;
+        }
+
+        return total / aantal.size();
     }
 
     /**
@@ -18,8 +26,14 @@ public class Administratie {
      * @param omzet
      * @return het gemiddelde
      */
-    public double berekenGemiddeldeOmzet(double[] omzet) {
-        return 0;
+    public static double berekenGemiddeldeOmzet(ArrayList<Double> omzet) {
+        double total = 0;
+
+        for (double getal : omzet) {
+            total += getal;
+        }
+
+        return total / omzet.size();
     }
 
     /**
@@ -31,8 +45,8 @@ public class Administratie {
 
     public static double[] berekenDagOmzet(double[] omzet) {
         double[] temp = new double[7];
-        for(int i = 0; i < 7; i++) {
 
+        for(int i = 0; i < 7; i++) {
             int j = 0;
 //            while( ... ) {
 //                temp[i] += omzet[i + 7 * j];
