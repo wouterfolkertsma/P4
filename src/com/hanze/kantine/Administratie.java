@@ -1,8 +1,16 @@
 package com.hanze.kantine;
 
+import java.time.DayOfWeek;
 import java.util.ArrayList;
 
+
+
 public class Administratie {
+
+    private static final int DAYS_IN_WEEK = 7;
+
+    private Administratie(){ }
+
 
     /**
      * Deze methode berekent van de int array aantal de gemiddelde waarde
@@ -43,17 +51,16 @@ public class Administratie {
      * @return array (7 elementen) met dagomzetten
      */
 
-    public static double[] berekenDagOmzet(double[] omzet) {
+    public static double[] berekenDagOmzet(ArrayList<Double> omzet) {
         double[] temp = new double[7];
 
-        for(int i = 0; i < 7; i++) {
+        for(int i = 0; i < DAYS_IN_WEEK; i++) {
             int j = 0;
-//            while( ... ) {
-//                temp[i] += omzet[i + 7 * j];
-//
-//                // omitted
-//
-//            }
+
+            while(omzet.size() > i + DAYS_IN_WEEK * j) {
+                temp[i] += omzet.get(i + DAYS_IN_WEEK * j);
+                j++;
+            }
         }
         return temp;
     }
