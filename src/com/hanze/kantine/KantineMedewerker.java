@@ -1,6 +1,6 @@
 package com.hanze.kantine;
 
-public class KantineMedewerker extends Persoon {
+public class KantineMedewerker extends Persoon implements KortingskaartHouder {
 
     private int medewerkersnummer;
     private boolean kassa;
@@ -29,5 +29,20 @@ public class KantineMedewerker extends Persoon {
 
     public String toString(){
         return "Kantine Medewerker";
+    }
+
+    @Override
+    public double geefKortingsPercentage() {
+        return 0.35d;
+    }
+
+    @Override
+    public boolean heeftMaximum() {
+        return false;
+    }
+
+    @Override
+    public double geefMaximum() {
+        return 0;
     }
 }

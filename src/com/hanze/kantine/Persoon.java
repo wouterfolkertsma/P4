@@ -11,6 +11,7 @@ public class Persoon {
 	private String achternaam;
 	private Datum geboorteDatum;
 	private char geslacht;
+	private Betaalwijze betaalwijze;
 
 	public Persoon(String BSN, String voornaam, String achternaam) {
 		this.BSN = BSN;
@@ -81,7 +82,15 @@ public class Persoon {
 		}
 	}
 
-	@Override
+    public Betaalwijze getBetaalwijze() {
+        return betaalwijze;
+    }
+
+    public void setBetaalwijze(Betaalwijze betaalwijze) {
+        this.betaalwijze = betaalwijze;
+    }
+
+    @Override
 	public String toString() {
 		return "Persoon{" +
 				"BSN='" + BSN + '\'' +

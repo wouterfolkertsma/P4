@@ -138,12 +138,15 @@ public class KantineSimulatie {
                 if(randomGetal <= AANTAL_STUDENTEN){
                     Student student = new Student("0000", "Henk", "de Vries", new Datum(01, 01, 2000), 'm', 0000, "ICT");
                     maakDienblad(student);
-                } else if(randomGetal + AANTAL_STUDENTEN <= AANTAL_DOCENTEN){
+                    maakBetaalwijze(student);
+                } else if(randomGetal <= AANTAL_STUDENTEN + AANTAL_DOCENTEN - 1){
                     Docent docent = new Docent("0000", "Harry", "Zijlstra", new Datum(01, 01, 2000), 'm', "HAMR", "ICT");
                     maakDienblad(docent);
+                    maakBetaalwijze(docent);
                 } else {
                     KantineMedewerker kantineMedewerker = new KantineMedewerker("0000", "Fatima", "de Jong", new Datum(01, 01, 2000), 'v', 0000, false);
                     maakDienblad(kantineMedewerker);
+                    maakBetaalwijze(kantineMedewerker);
                 }
             }
 
@@ -214,6 +217,17 @@ public class KantineSimulatie {
         kantine.loopPakSluitAan(persoon, artikelen);
 
         System.out.println("Er komt een " + persoon.toString() + " binnen.");
+    }
+
+    private void maakBetaalwijze(Persoon persoon) {
+        if(random.nextBoolean()) {
+            Pinpas pinpas = new Pinpas();
+            pinpas.setKredietLimiet(getRandomValue(0, 10));
+            persoon.setBetaalwijze(pinpas);
+        } else {
+            Contant contant = new Contant();
+            persoon.setBetaalwijze(contant);
+        }
     }
 
     /**

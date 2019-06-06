@@ -1,3 +1,5 @@
+package com.hanze.kantine;
+
 public interface KortingskaartHouder {
 
     /**

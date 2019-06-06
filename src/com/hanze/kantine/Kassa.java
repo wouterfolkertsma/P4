@@ -24,19 +24,41 @@ public class Kassa {
      * de kassa worden bijgehouden. De implementatie wordt
      * later vervangen door een echte betaling door de persoon.
      *
-     * @param klant die moet afrekenen
+     * @param dienblad die moet afrekenen
      */
-    public void rekenAf(Dienblad klant) {
+    public void rekenAf(Dienblad dienblad) {
 //        this.kasInhoud += klant.getTotaalPrijs();
 //        this.aantalArtikelen += klant.getArtikelen().size();
 
-        Stack<Artikel> artikels = klant.getArtikelen();
+        Stack<Artikel> artikels = dienblad.getArtikelen();
         this.aantalArtikelen += artikels.size();
+        Iterator<Artikel> artikelIterator = dienblad.getArtikelen().iterator();
 
-        Iterator<Artikel> artikelIterator = klant.getArtikelen().iterator();
+        double amountToPay = 0d;
         while (artikelIterator.hasNext()) {
-            this.kasInhoud += artikelIterator.next().getPrijs();
+            amountToPay += artikelIterator.next().getPrijs();
         }
+
+        Persoon klant = dienblad.getKlant();
+        Betaalwijze betaalwijze = klant.getBetaalwijze();
+
+        if(klant instanceof KortingskaartHouder) {
+            KortingskaartHouder kortingskaartHouder = (KortingskaartHouder) klant;
+            double discount = amountToPay * kortingskaartHouder.geefKortingsPercentage();
+            if(kortingskaartHouder.heeftMaximum() && discount > kortingskaartHouder.geefMaximum()) {
+                discount = kortingskaartHouder.geefMaximum();
+            }
+
+            System.out.printf("%s heeft \u20ac%.2f korting gekregen\n", klant.toString(), discount);
+            amountToPay -= discount;
+        }
+
+        if(betaalwijze != null && betaalwijze.betaal(amountToPay)) {
+            this.kasInhoud += amountToPay;
+            return;
+        }
+
+        System.out.println("Iemand kan niet betalen!");
     }
 
     /**
