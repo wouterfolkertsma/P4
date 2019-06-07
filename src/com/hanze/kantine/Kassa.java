@@ -49,16 +49,21 @@ public class Kassa {
                 discount = kortingskaartHouder.geefMaximum();
             }
 
-            System.out.printf("%s heeft \u20ac%.2f korting gekregen\n", klant.toString(), discount);
+            System.out.printf("Een %s heeft \u20ac%.2f korting gekregen\n", klant.toString(), discount);
             amountToPay -= discount;
         }
 
-        if(betaalwijze != null && betaalwijze.betaal(amountToPay)) {
+        try {
+            betaalwijze.betaal(amountToPay);
             this.kasInhoud += amountToPay;
-            return;
+        } catch (TeWeinigGeldException e) {
+            System.out.printf("%s %s (%s) kan \u20ac%.2f niet betalen!\n",
+                    klant.getVoornaam(),
+                    klant.getAchternaam(),
+                    klant.toString(),
+                    amountToPay);
         }
 
-        System.out.println("Iemand kan niet betalen!");
     }
 
     /**

@@ -1,12 +1,11 @@
 package com.hanze.kantine;
 
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class KantineSimulatie {
 
-    private static final int AANTAL_STUDENTEN = 89;
-    private static final int AANTAL_DOCENTEN = 10;
+    private static final int KANS_STUDENTEN = 89;
+    private static final int KANS_DOCENTEN = 10;
     private static final int AANTAL_KANTINEMEDEWERKERS = 1;
     // kantine
     private Kantine kantine;
@@ -135,16 +134,16 @@ public class KantineSimulatie {
             for(int j = 0; j < 100; j++){
                 int randomGetal = random.nextInt(100);
 
-                if(randomGetal <= AANTAL_STUDENTEN){
-                    Student student = new Student("0000", "Henk", "de Vries", new Datum(01, 01, 2000), 'm', 0000, "ICT");
+                if(randomGetal <= KANS_STUDENTEN){
+                    Student student = new Student("0000", "Henk", "de Vries [" + j + "]", new Datum(1, 1, 2000), 'm', 0, "ICT");
                     maakDienblad(student);
                     maakBetaalwijze(student);
-                } else if(randomGetal <= AANTAL_STUDENTEN + AANTAL_DOCENTEN - 1){
-                    Docent docent = new Docent("0000", "Harry", "Zijlstra", new Datum(01, 01, 2000), 'm', "HAMR", "ICT");
+                } else if(randomGetal <= KANS_STUDENTEN + KANS_DOCENTEN - 1){
+                    Docent docent = new Docent("0000", "Harry", "Zijlstra [" + j + "]", new Datum(1, 1, 2000), 'm', "HAMR", "ICT");
                     maakDienblad(docent);
                     maakBetaalwijze(docent);
                 } else {
-                    KantineMedewerker kantineMedewerker = new KantineMedewerker("0000", "Fatima", "de Jong", new Datum(01, 01, 2000), 'v', 0000, false);
+                    KantineMedewerker kantineMedewerker = new KantineMedewerker("0000", "Fatima", "de Jong [" + j + "]", new Datum(1, 1, 2000), 'v', 0, false);
                     maakDienblad(kantineMedewerker);
                     maakBetaalwijze(kantineMedewerker);
                 }
@@ -177,7 +176,7 @@ public class KantineSimulatie {
             // verwerk rij voor de kassa
             kantine.verwerkRijVoorKassa();
 
-            System.out.printf("--------------- Dag: %d ---------------\n", i);
+            System.out.printf("\n--------------- Dag: %d ---------------\n", i);
             System.out.printf("Aantal artikelen verkocht deze dag: %d\n", kantine.getKassa().getAantalArtikelen());
             System.out.printf("Totale omzet deze dag: \u20ac%.2f\n", kantine.getKassa().hoeveelheidGeldInKassa());
 
@@ -186,6 +185,8 @@ public class KantineSimulatie {
 
             kantine.resetKassa();
         }
+
+        System.out.printf("\n--------------- Eind simulatie ---------------\n");
 
         System.out.printf("Gemiddelde omzet: \u20ac%.2f\n", Administratie.berekenGemiddeldeOmzet(dagOmzetten));
         System.out.printf("Het berekende gemiddelde is: \u20ac%.2f\n", Administratie.berekenGemiddeldAantal(dagArtikelen));
