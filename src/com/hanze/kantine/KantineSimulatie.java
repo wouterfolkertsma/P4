@@ -1,8 +1,16 @@
 package com.hanze.kantine;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.*;
 
 public class KantineSimulatie {
+
+    // Create an EntityManagerFactory when you start the application.
+    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
+            .createEntityManagerFactory("KantineSimulatie");
+    private EntityManager manager;
 
     private static final int KANS_STUDENTEN = 89;
     private static final int KANS_DOCENTEN = 10;
