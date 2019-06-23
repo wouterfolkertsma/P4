@@ -1,17 +1,21 @@
 package com.hanze.kantine;
 
+import javax.persistence.EntityManager;
+
 public class Kantine {
 
     private Kassa kassa;
     private KassaRij kassarij;
     private KantineAanbod kantineAanbod;
+    private EntityManager manager;
 
     /**
      * Constructor
      */
-    public Kantine() {
+    public Kantine(EntityManager manager) {
         kassarij = new KassaRij();
-        kassa = new Kassa(kassarij);
+        kassa = new Kassa(kassarij, manager);
+        this.manager = manager;
     }
 
     /**

@@ -1,5 +1,8 @@
 package com.hanze.kantine;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import java.time.LocalDate;
 import java.util.Iterator;
 import java.util.Stack;
 
@@ -8,14 +11,16 @@ public class Kassa {
     private KassaRij kassaRij;
     private double kasInhoud;
     private int aantalArtikelen;
+    private EntityManager manager;
 
     /**
      * Constructor
      */
-    public Kassa(KassaRij kassarij) {
+    public Kassa(KassaRij kassarij, EntityManager manager) {
         this.kassaRij = kassarij;
         this.kasInhoud = 0;
         this.aantalArtikelen = 0;
+        this.manager = manager;
     }
 
     /**
@@ -27,36 +32,33 @@ public class Kassa {
      * @param dienblad die moet afrekenen
      */
     public void rekenAf(Dienblad dienblad) {
-//        this.kasInhoud += klant.getTotaalPrijs();
-//        this.aantalArtikelen += klant.getArtikelen().size();
+        Factuur factuur = new Factuur(dienblad, LocalDate.now());
 
-        Stack<Artikel> artikels = dienblad.getArtikelen();
-        this.aantalArtikelen += artikels.size();
-        Iterator<Artikel> artikelIterator = dienblad.getArtikelen().iterator();
-
-        double amountToPay = 0d;
-        while (artikelIterator.hasNext()) {
-            amountToPay += artikelIterator.next().getPrijs();
-        }
-
+        double amountToPay = factuur.getTotaal();
         Persoon klant = dienblad.getKlant();
         Betaalwijze betaalwijze = klant.getBetaalwijze();
 
-        if(klant instanceof KortingskaartHouder) {
-            KortingskaartHouder kortingskaartHouder = (KortingskaartHouder) klant;
-            double discount = amountToPay * kortingskaartHouder.geefKortingsPercentage();
-            if(kortingskaartHouder.heeftMaximum() && discount > kortingskaartHouder.geefMaximum()) {
-                discount = kortingskaartHouder.geefMaximum();
-            }
+        this.kasInhoud += amountToPay;
+        this.aantalArtikelen += factuur.getTotaal();
 
-            System.out.printf("Een %s heeft \u20ac%.2f korting gekregen\n", klant.toString(), discount);
-            amountToPay -= discount;
-        }
-
+        EntityTransaction transaction = null;
         try {
+            transaction = manager.getTransaction();
+            transaction.begin();
             betaalwijze.betaal(amountToPay);
             this.kasInhoud += amountToPay;
+            manager.persist(factuur);
+            transaction.commit();
+            System.out.println(factuur);
+
+            for(FactuurRegel fr : factuur.getRegels()) {
+                System.out.println(fr);
+            }
         } catch (TeWeinigGeldException e) {
+            if(transaction != null) {
+                transaction.rollback();
+            }
+
             System.out.printf("%s %s (%s) kan \u20ac%.2f niet betalen!\n",
                     klant.getVoornaam(),
                     klant.getAchternaam(),

@@ -3,6 +3,7 @@ package com.hanze.kantine;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import java.util.*;
 
 public class KantineSimulatie {
@@ -55,7 +56,8 @@ public class KantineSimulatie {
      * 39
      */
     public KantineSimulatie() {
-        kantine = new Kantine();
+        this.manager = ENTITY_MANAGER_FACTORY.createEntityManager();
+        kantine = new Kantine(this.manager);
         random = new Random();
         int[] hoeveelheden = getRandomArray(
                 AANTAL_ARTIKELEN,
@@ -205,6 +207,49 @@ public class KantineSimulatie {
         for(double omzetDag : gemiddeldeOmzetPerDag){
             System.out.printf("De gemiddelde omzet voor dag %d is: \u20ac%.2f\n", dagNummer++, omzetDag );
         }
+
+        System.out.print("\n--------------- Totalen ---------------\n");
+        Query queryTotaleOmzet = manager.createQuery(
+                "SELECT SUM(totaal) FROM Factuur"
+        );
+        double totaal = (double) queryTotaleOmzet.getSingleResult();
+
+        Query queryTotaleKorting = manager.createQuery(
+                "SELECT SUM(korting) FROM Factuur"
+        );
+        double totaleKorting = (double) queryTotaleKorting.getSingleResult();
+
+        Query queryAVGKorting = manager.createQuery(
+                "SELECT AVG(korting) FROM Factuur"
+        );
+
+        double avgKorting = (double) queryAVGKorting.getSingleResult();
+
+        Query queryAVGTotaal = manager.createQuery(
+                "SELECT AVG(totaal) FROM Factuur"
+        );
+        double avgTotaal = (double) queryAVGTotaal.getSingleResult();
+
+        System.out.printf("Avg omzet: \u20ac%.2f\n", avgTotaal);
+        System.out.printf("Avg korting: \u20ac%.2f\n", avgKorting);
+        System.out.printf("Totale omzet: \u20ac%.2f\n", totaal);
+        System.out.printf("Totale korting: \u20ac%.2f\n", totaleKorting);
+
+//        Query queryTopDrie = manager.createQuery(
+//                "SELECT totaal FROM Factuur ORDER BY totaal DESC"
+//        );
+//
+//        List<Double[]> topDrieOmzetten = queryTopDrie.getResultList();
+//        System.out.println("De hoogste omzetten zijn:");
+////        topDrieOmzetten.forEach(r -> System.out.print(r[0] + ","));
+//        for(Double[] r: topDrieOmzetten) {
+//            double omzet = (Double)r[1];
+//            System.out.print(omzet);
+//        }
+
+        System.out.println();
+
+
     }
 
     public void maakDienblad(Persoon persoon){

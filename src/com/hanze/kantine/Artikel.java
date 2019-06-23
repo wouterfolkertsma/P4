@@ -1,9 +1,17 @@
 package com.hanze.kantine;
 
-public class Artikel {
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import java.io.Serializable;
 
+@Embeddable
+public class Artikel implements Serializable {
+
+    @Column
     private double prijs;
 
+    @Column
     private String naam;
 
     public Artikel() {}
