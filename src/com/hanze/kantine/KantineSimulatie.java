@@ -230,6 +230,19 @@ public class KantineSimulatie {
         );
         double avgTotaal = (double) queryAVGTotaal.getSingleResult();
 
+        Query queryTop3 = manager.createQuery(
+                "SELECT totaal FROM Factuur ORDER BY totaal DESC"
+        );
+
+        queryTop3.setMaxResults(3);
+
+        List nummertjes = queryTop3.getResultList();
+
+        System.out.println("TOP 3:");
+        for (Object nummertje : nummertjes) {
+            System.out.printf("\u20ac%.2f\n", (double) nummertje);
+        }
+
         System.out.printf("Avg omzet: \u20ac%.2f\n", avgTotaal);
         System.out.printf("Avg korting: \u20ac%.2f\n", avgKorting);
         System.out.printf("Totale omzet: \u20ac%.2f\n", totaal);
